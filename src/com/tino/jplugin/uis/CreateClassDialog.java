@@ -25,7 +25,6 @@ public class CreateClassDialog extends JDialog {
     public CreateClassDialog(Project project) {
         this.project = project;
         UiUtil.centerDialog(this, 600, 200);
-        setLocationRelativeTo(null);
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);

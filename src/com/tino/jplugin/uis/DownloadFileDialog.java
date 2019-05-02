@@ -24,7 +24,6 @@ public class DownloadFileDialog extends JDialog {
     public DownloadFileDialog(Project project) {
         this.project = project;
         UiUtil.centerDialog(this, 600, 200);
-        setLocationRelativeTo(null);
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
