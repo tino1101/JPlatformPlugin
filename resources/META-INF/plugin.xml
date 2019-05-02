@@ -1,0 +1,40 @@
+<idea-plugin>
+    <id>com.tino.jplugin</id>
+    <name>JPlugin</name>
+    <version>1.0</version>
+    <vendor email="tino1897@126.com" url="http://www.tino.com">Tino</vendor>
+
+    <description>downloadFile and createClass</description>
+
+    <change-notes>initial</change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <group id="com.tino.jplugin.JTools" popup="true" text="JTools">
+            <add-to-group group-id="CodeMenu" anchor="first"/>
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
+            <action id="com.tino.jplugin.actions.DownloadFileAction" class="com.tino.jplugin.actions.DownloadFileAction"
+                    text="DownloadFile"
+                    description="this is DownloadFile"/>
+            <separator/>
+
+            <action id="com.tino.jplugin.actions.CreateClassAction" class="com.tino.jplugin.actions.CreateClassAction"
+                    text="CreateClass"
+                    description="this is CreateClass"/>
+        </group>
+    </actions>
+
+</idea-plugin>
